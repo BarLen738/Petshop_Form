@@ -1,0 +1,6 @@
+https://regexr.com/
+
+https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
+
+https://browsersync.io/
+
