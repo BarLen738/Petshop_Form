@@ -66,7 +66,7 @@ const validadores = {
 function mostrarMensajeDeError(tipoDeInput, input) {
     let mensaje = "";
     tipoDeErrores.forEach((error) => {
-        if (input.validity[error]) {
+        if (input.validity[error]) { //validity es un boolean
             mensaje = mensajesDeError[tipoDeInput][error];
         }
     });
@@ -74,14 +74,14 @@ function mostrarMensajeDeError(tipoDeInput, input) {
 }
 
 function validarNacimiento(input) {
-    const fechaCliente = new Date(input.value);
+    const fechaCliente = new Date(input.value); //input que ingresa el cliente
     let mensaje = "";
     //si no es mayor de edad !mayorDeEdad
     if (!mayorDeEdad(fechaCliente)) {
         mensaje = "Debes tener al menos 18 años";
     }
 
-    input.setCustomValidity(mensaje);
+    input.setCustomValidity(mensaje); //función para mostrar mensaje
 
 }
 
